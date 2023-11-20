@@ -364,7 +364,7 @@ public class QuanLySachView extends javax.swing.JFrame {
 
     private void btnTimKiemMouseClicked(java.awt.event.MouseEvent evt) {                                        
         // TODO add your handling code here:
-
+//
         String ma = txtMaSach.getText();
         ArrayList<Sach> checkTim = quanLySach.timKiem(ma);
         loadData(checkTim);
