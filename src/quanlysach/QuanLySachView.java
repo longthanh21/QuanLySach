@@ -331,6 +331,13 @@ public class QuanLySachView extends javax.swing.JFrame {
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        int i = tblBang.getSelectedRow();
+        Boolean checkXoa = quanLySach.xoa(i);
+        if (checkXoa) {
+            JOptionPane.showMessageDialog(this, "Xóa thành công");
+            loadData(list);
+        }
+
     }
 
     private void btnThemMouseClicked(java.awt.event.MouseEvent evt) {
