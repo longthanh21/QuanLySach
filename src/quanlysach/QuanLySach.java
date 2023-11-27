@@ -40,7 +40,7 @@ public class QuanLySach {
     ArrayList<Sach> timKiem(String ma) {
         ArrayList<Sach> listTimKiem = new ArrayList<>();
         for (Sach s : list) {
-            if (ma.equals(s.getMaSach())) {
+            if (s.getMaSach().startsWith(ma)) {
                 listTimKiem.add(s);
             }
         }

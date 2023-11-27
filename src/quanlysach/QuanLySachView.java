@@ -385,6 +385,11 @@ public class QuanLySachView extends javax.swing.JFrame {
 //
         String ma = txtMaSach.getText();
         ArrayList<Sach> checkTim = quanLySach.timKiem(ma);
+
+        if (checkTim.size() == 0) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy");
+            return;
+        }
         loadData(checkTim);
     }
 
