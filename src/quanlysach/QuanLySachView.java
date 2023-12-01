@@ -152,7 +152,7 @@ public class QuanLySachView extends javax.swing.JFrame {
                 btnTimKiemActionPerformed(evt);
             }
         });
-
+//dja0naifoanff
         cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRUYEN", "TIEU THUYET" }));
 
         jButton2.setText("SX Tăng");
