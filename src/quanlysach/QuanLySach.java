@@ -32,6 +32,11 @@ public class QuanLySach {
         return true;
     }
 
+    Boolean xoa(int i) {
+        list.remove(i);
+        return true;
+    }
+
     Boolean sua(int i, Sach sach) {
         list.set(i, sach);
         return true;
@@ -40,7 +45,7 @@ public class QuanLySach {
     ArrayList<Sach> timKiem(String ma) {
         ArrayList<Sach> listTimKiem = new ArrayList<>();
         for (Sach s : list) {
-            if (ma.equals(s.getMaSach())) {
+            if (s.getMaSach().startsWith(ma)) {
                 listTimKiem.add(s);
             }
         }

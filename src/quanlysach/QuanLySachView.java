@@ -73,12 +73,10 @@ public class QuanLySachView extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblBang.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Ma Sach", "Ten Sach", "The Loai", "Tac Gia", "Don Gia", "So Luong"
-            }
+                new Object[][]{},
+                new String[]{
+                    "Ma Sach", "Ten Sach", "The Loai", "Tac Gia", "Don Gia", "So Luong"
+                }
         ));
         tblBang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -90,18 +88,18 @@ public class QuanLySachView extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1)
+                                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -168,48 +166,58 @@ public class QuanLySachView extends javax.swing.JFrame {
             }
         });
 
-        cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRUYEN", "TIEU THUYET" }));
+        cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"TRUYEN", "TIEU THUYET"}));
 
+        jButton2.setText("SX Tăng");
+
+        jButton3.setText("SX Giảm");
+        //Chuc nang sap xep
+        //long
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnThem)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSua)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnXoa)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnTimKiem))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
+                        .addGap(35, 35, 35)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtTenSach, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel5))
+                                .addComponent(btnThem)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSua)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnXoa)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnTimKiem)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtMaSach, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtTenSach, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtMaSach, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDonGia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtDonGia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTacGia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cboTheLoai, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cboTheLoai, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtTacGia, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(284, 284, 284)))
+                .addGap(29, 29, 29))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +246,11 @@ public class QuanLySachView extends javax.swing.JFrame {
                     .addComponent(btnSua)
                     .addComponent(btnXoa)
                     .addComponent(btnTimKiem))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -247,10 +259,10 @@ public class QuanLySachView extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,37 +277,57 @@ public class QuanLySachView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void txtTenSachActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void txtTenSachActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }                                          
+    }
 
-    private void txtDonGiaActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void txtDonGiaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }                                         
+    }
 
-    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
-    }                                       
+    }
 
-    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         int i = tblBang.getSelectedRow();
         String maSach = txtMaSach.getText();
+        if (maSach.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Mã sách không được trống");
+            return;
+        }
         String tenSach = txtTenSach.getText();
+        if (tenSach.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tên sách không được trống");
+            return;
+        }
         String theLoai = cboTheLoai.getSelectedItem().toString();
         String tacGia = txtTacGia.getText();
+        if (tacGia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tác giả không được trống");
+            return;
+        }
         String donGia = txtDonGia.getText();
+        if (donGia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Đơn giá không được trống");
+            return;
+        }
         String soLuong = txtSoLuong.getText();
+        if (soLuong.isEmpty() || Integer.parseInt(soLuong) <= 0) {
+            JOptionPane.showMessageDialog(this, "Số lượng không được trống và phải lớn hơn 0");
+            return;
+        }
         Sach sach = new Sach(maSach, tenSach, theLoai, tacGia, donGia, soLuong);
         Boolean checkSua = quanLySach.sua(i, sach);
         if (checkSua) {
             JOptionPane.showMessageDialog(this, "Sửa thành công");
             loadData(list);
         }
-    }                                      
+    }
 
-    private void tblBangMouseClicked(java.awt.event.MouseEvent evt) {                                     
+    private void tblBangMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = tblBang.getSelectedRow();
         txtMaSach.setText((String) tblBang.getValueAt(i, 0));
@@ -304,18 +336,25 @@ public class QuanLySachView extends javax.swing.JFrame {
         txtTacGia.setText((String) tblBang.getValueAt(i, 3));
         txtDonGia.setText((String) tblBang.getValueAt(i, 4));
         txtSoLuong.setText((String) tblBang.getValueAt(i, 5));
-    }                                    
+    }
 
-    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
-    }                                          
+    }
 
-    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }                                      
+        int i = tblBang.getSelectedRow();
+        Boolean checkXoa = quanLySach.xoa(i);
+        if (checkXoa) {
+            JOptionPane.showMessageDialog(this, "Xóa thành công");
+            loadData(list);
+        }
 
-    private void btnThemMouseClicked(java.awt.event.MouseEvent evt) {                                     
+    }
+
+    private void btnThemMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         try {
             String maSach = txtMaSach.getText();
@@ -360,15 +399,20 @@ public class QuanLySachView extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Số lượng không được là chữ");
         }
-    }                                    
+    }
 
-    private void btnTimKiemMouseClicked(java.awt.event.MouseEvent evt) {                                        
+    private void btnTimKiemMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
 //
         String ma = txtMaSach.getText();
         ArrayList<Sach> checkTim = quanLySach.timKiem(ma);
+
+        if (checkTim.size() == 0) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy");
+            return;
+        }
         loadData(checkTim);
-    }                                       
+    }
 
     /**
      * @param args the command line arguments
