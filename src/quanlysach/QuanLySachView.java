@@ -17,6 +17,7 @@ public class QuanLySachView extends javax.swing.JFrame {
     /**
      * Creates new form QuanLySachView
      */
+    //Long da vao day sua 
     QuanLySach quanLySach = new QuanLySach();
     ArrayList<Sach> list = quanLySach.getList();
     DefaultTableModel defaultTableModel;
@@ -152,7 +153,6 @@ public class QuanLySachView extends javax.swing.JFrame {
                 btnTimKiemActionPerformed(evt);
             }
         });
-//dja0naifoanff
         cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRUYEN", "TIEU THUYET" }));
 
         jButton2.setText("SX Tăng");
