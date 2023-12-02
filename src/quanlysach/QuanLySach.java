@@ -18,8 +18,8 @@ public class QuanLySach {
         list.add(new Sach("MS001", "TAY DU KY", "TIEU THUYET", "TG1", "200000", "20"));
         list.add(new Sach("MS002", "DPRAEMON", "TRUYEN", "TG2", "100000", "10"));
         list.add(new Sach("MS003", "THANH", "TRUYEN", "TG3", "100000", "30"));
-        list.add(new Sach("MS004", "THAM LAM", "TRUYEN", "TG4", "100000", "10"));
-        list.add(new Sach("MS005", "TU DUY", "TRUYEN", "TG5", "100000", "10"));
+        list.add(new Sach("MS004", "THAM LAM", "TRUYEN", "TG4", "100000", "50"));
+        list.add(new Sach("MS005", "TU DUY", "TRUYEN", "TG5", "100000", "40"));
 
     }
 
@@ -36,7 +36,6 @@ public class QuanLySach {
         list.remove(i);
         return true;
     }
-
     Boolean sua(int i, Sach sach) {
         list.set(i, sach);
         return true;
@@ -50,5 +49,32 @@ public class QuanLySach {
             }
         }
         return listTimKiem;
+    }
+
+    ArrayList<Sach> sx() {
+        Integer soLuong = 100;
+        ArrayList<Sach> listSapXep = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            soLuong--;
+            for (Sach s : list) {
+                if (Integer.valueOf(s.getSoLuong()) == soLuong) {
+                    listSapXep.add(s);
+                }
+            }
+        }
+        return listSapXep;
+    }
+        ArrayList<Sach> sx1() {
+        Integer soLuong = 0;
+        ArrayList<Sach> listSapXep = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            soLuong++;
+            for (Sach s : list) {
+                if (Integer.valueOf(s.getSoLuong()) == soLuong) {
+                    listSapXep.add(s);
+                }
+            }
+        }
+        return listSapXep;
     }
 }

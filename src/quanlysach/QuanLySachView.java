@@ -17,6 +17,7 @@ public class QuanLySachView extends javax.swing.JFrame {
     /**
      * Creates new form QuanLySachView
      */
+    //Long da vao day sua 
     QuanLySach quanLySach = new QuanLySach();
     ArrayList<Sach> list = quanLySach.getList();
     DefaultTableModel defaultTableModel;
@@ -27,11 +28,9 @@ public class QuanLySachView extends javax.swing.JFrame {
     }
 
     void loadData(ArrayList<Sach> list) {
-
         defaultTableModel = (DefaultTableModel) tblBang.getModel();
         defaultTableModel.setRowCount(0);
         for (Sach sach : list) {
-
             defaultTableModel.addRow(new Object[]{
                 sach.getMaSach(), sach.getTenSach(), sach.getTheLoai(), sach.getTacGia(), sach.getDonGia(), sach.getSoLuong()
             });
@@ -67,16 +66,20 @@ public class QuanLySachView extends javax.swing.JFrame {
         btnXoa = new javax.swing.JButton();
         btnTimKiem = new javax.swing.JButton();
         cboTheLoai = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblBang.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{},
-                new String[]{
-                    "Ma Sach", "Ten Sach", "The Loai", "Tac Gia", "Don Gia", "So Luong"
-                }
+            new Object [][] {
+
+            },
+            new String [] {
+                "Ma Sach", "Ten Sach", "The Loai", "Tac Gia", "Don Gia", "So Luong"
+            }
         ));
         tblBang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -88,18 +91,18 @@ public class QuanLySachView extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane1)
-                                .addContainerGap())
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(33, Short.MAX_VALUE))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -128,51 +131,50 @@ public class QuanLySachView extends javax.swing.JFrame {
 
         jLabel7.setText("So luong");
 
-        btnThem.setText("Thêm");
-        btnThem.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnThemMouseClicked(evt);
-            }
-        });
+        btnThem.setText("Them");
         btnThem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnThemActionPerformed(evt);
             }
         });
 
-        btnSua.setText("Sửa");
+        btnSua.setText("Sua");
         btnSua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSuaActionPerformed(evt);
             }
         });
 
-        btnXoa.setText("Xóa");
+        btnXoa.setText("Xoa");
         btnXoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnXoaActionPerformed(evt);
             }
         });
 
-        btnTimKiem.setText("Tìm kiếm");
-        btnTimKiem.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnTimKiemMouseClicked(evt);
-            }
-        });
+        btnTimKiem.setText("Tim kiem");
         btnTimKiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTimKiemActionPerformed(evt);
             }
         });
 
-        cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"TRUYEN", "TIEU THUYET"}));
+        cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRUYEN", "TIEU THUYET" }));
 
         jButton2.setText("SX Tăng");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("SX Giảm");
-        //Chuc nang sap xep
-        //long
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -277,84 +279,15 @@ public class QuanLySachView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void txtTenSachActionPerformed(java.awt.event.ActionEvent evt) {
+    private void txtTenSachActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
-    }
+    }                                          
 
-    private void txtDonGiaActionPerformed(java.awt.event.ActionEvent evt) {
+    private void txtDonGiaActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }
+    }                                         
 
-    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-
-    }
-
-    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        int i = tblBang.getSelectedRow();
-        String maSach = txtMaSach.getText();
-        if (maSach.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Mã sách không được trống");
-            return;
-        }
-        String tenSach = txtTenSach.getText();
-        if (tenSach.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Tên sách không được trống");
-            return;
-        }
-        String theLoai = cboTheLoai.getSelectedItem().toString();
-        String tacGia = txtTacGia.getText();
-        if (tacGia.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Tác giả không được trống");
-            return;
-        }
-        String donGia = txtDonGia.getText();
-        if (donGia.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Đơn giá không được trống");
-            return;
-        }
-        String soLuong = txtSoLuong.getText();
-        if (soLuong.isEmpty() || Integer.parseInt(soLuong) <= 0) {
-            JOptionPane.showMessageDialog(this, "Số lượng không được trống và phải lớn hơn 0");
-            return;
-        }
-        Sach sach = new Sach(maSach, tenSach, theLoai, tacGia, donGia, soLuong);
-        Boolean checkSua = quanLySach.sua(i, sach);
-        if (checkSua) {
-            JOptionPane.showMessageDialog(this, "Sửa thành công");
-            loadData(list);
-        }
-    }
-
-    private void tblBangMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
-        int i = tblBang.getSelectedRow();
-        txtMaSach.setText((String) tblBang.getValueAt(i, 0));
-        txtTenSach.setText((String) tblBang.getValueAt(i, 1));
-        cboTheLoai.setSelectedItem(tblBang.getValueAt(i, 2));
-        txtTacGia.setText((String) tblBang.getValueAt(i, 3));
-        txtDonGia.setText((String) tblBang.getValueAt(i, 4));
-        txtSoLuong.setText((String) tblBang.getValueAt(i, 5));
-    }
-
-    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-
-    }
-
-    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        int i = tblBang.getSelectedRow();
-        Boolean checkXoa = quanLySach.xoa(i);
-        if (checkXoa) {
-            JOptionPane.showMessageDialog(this, "Xóa thành công");
-            loadData(list);
-        }
-
-    }
-
-    private void btnThemMouseClicked(java.awt.event.MouseEvent evt) {
+    private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
         try {
             String maSach = txtMaSach.getText();
@@ -399,20 +332,89 @@ public class QuanLySachView extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Số lượng không được là chữ");
         }
-    }
+    }                                       
 
-    private void btnTimKiemMouseClicked(java.awt.event.MouseEvent evt) {
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
-//
-        String ma = txtMaSach.getText();
-        ArrayList<Sach> checkTim = quanLySach.timKiem(ma);
+        int i = tblBang.getSelectedRow();
+        String maSach = txtMaSach.getText();
+        if (maSach.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Mã sách không được trống");
+            return;
+        }
+        String tenSach = txtTenSach.getText();
+        if (tenSach.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tên sách không được trống");
+            return;
+        }
+        String theLoai = cboTheLoai.getSelectedItem().toString();
+        String tacGia = txtTacGia.getText();
+        if (tacGia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Tác giả không được trống");
+            return;
+        }
+        String donGia = txtDonGia.getText();
+        if (donGia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Đơn giá không được trống");
+            return;
+        }
+        String soLuong = txtSoLuong.getText();
+        if (soLuong.isEmpty() || Integer.parseInt(soLuong) <= 0) {
+            JOptionPane.showMessageDialog(this, "Số lượng không được trống và phải lớn hơn 0");
+            return;
+        }
+        Sach sach = new Sach(maSach, tenSach, theLoai, tacGia, donGia, soLuong);
+        Boolean checkSua = quanLySach.sua(i, sach);
+        if (checkSua) {
+            JOptionPane.showMessageDialog(this, "Sửa thành công");
+            loadData(list);
+        }
+    }                                      
 
-        if (checkTim.size() == 0) {
+    private void tblBangMouseClicked(java.awt.event.MouseEvent evt) {                                     
+        // TODO add your handling code here:
+        int i = tblBang.getSelectedRow();
+        txtMaSach.setText((String) tblBang.getValueAt(i, 0));
+        txtTenSach.setText((String) tblBang.getValueAt(i, 1));
+        cboTheLoai.setSelectedItem(tblBang.getValueAt(i, 2));
+        txtTacGia.setText((String) tblBang.getValueAt(i, 3));
+        txtDonGia.setText((String) tblBang.getValueAt(i, 4));
+        txtSoLuong.setText((String) tblBang.getValueAt(i, 5));
+    }                                    
+
+    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        String check = txtMaSach.getText();
+        ArrayList<Sach> listKetQua = quanLySach.timKiem(check);
+         if (listKetQua.size() == 0) {
             JOptionPane.showMessageDialog(this, "Không tìm thấy");
             return;
         }
-        loadData(checkTim);
-    }
+        loadData(listKetQua);
+
+    }                                          
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        ArrayList<Sach> listSapXep = quanLySach.sx1();
+        loadData(listSapXep);
+    }                                        
+
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+         int i = tblBang.getSelectedRow();
+        Boolean checkXoa = quanLySach.xoa(i);
+        if (checkXoa) {
+            JOptionPane.showMessageDialog(this, "Xóa thành công");
+            loadData(list);
+        }
+    }                                      
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        ArrayList<Sach> listSapXep = quanLySach.sx();
+        loadData(listSapXep);
+    }                                        
 
     /**
      * @param args the command line arguments
@@ -455,6 +457,8 @@ public class QuanLySachView extends javax.swing.JFrame {
     private javax.swing.JButton btnTimKiem;
     private javax.swing.JButton btnXoa;
     private javax.swing.JComboBox<String> cboTheLoai;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
