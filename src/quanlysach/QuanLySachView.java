@@ -66,8 +66,8 @@ public class QuanLySachView extends javax.swing.JFrame {
         btnXoa = new javax.swing.JButton();
         btnTimKiem = new javax.swing.JButton();
         cboTheLoai = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnSXTang = new javax.swing.JButton();
+        btnSXGiam = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -161,17 +161,17 @@ public class QuanLySachView extends javax.swing.JFrame {
 
         cboTheLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRUYEN", "TIEU THUYET" }));
 
-        jButton2.setText("SX Tăng");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnSXTang.setText("SX Tăng");
+        btnSXTang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSXTangActionPerformed(evt);
             }
         });
 
-        jButton3.setText("SX Giảm");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnSXGiam.setText("SX Giảm");
+        btnSXGiam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnSXGiamActionPerformed(evt);
             }
         });
 
@@ -215,9 +215,9 @@ public class QuanLySachView extends javax.swing.JFrame {
                                     .addComponent(txtSoLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(btnSXTang)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
+                        .addComponent(btnSXGiam)
                         .addGap(284, 284, 284)))
                 .addGap(29, 29, 29))
         );
@@ -250,8 +250,8 @@ public class QuanLySachView extends javax.swing.JFrame {
                     .addComponent(btnTimKiem))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(btnSXTang)
+                    .addComponent(btnSXGiam))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -394,11 +394,11 @@ public class QuanLySachView extends javax.swing.JFrame {
 
     }                                          
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btnSXTangActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
         ArrayList<Sach> listSapXep = quanLySach.sx1();
         loadData(listSapXep);
-    }                                        
+    }                                         
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
@@ -410,11 +410,11 @@ public class QuanLySachView extends javax.swing.JFrame {
         }
     }                                      
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btnSXGiamActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
         ArrayList<Sach> listSapXep = quanLySach.sx();
         loadData(listSapXep);
-    }                                        
+    }                                         
 
     /**
      * @param args the command line arguments
@@ -452,13 +452,13 @@ public class QuanLySachView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
+    private javax.swing.JButton btnSXGiam;
+    private javax.swing.JButton btnSXTang;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnTimKiem;
     private javax.swing.JButton btnXoa;
     private javax.swing.JComboBox<String> cboTheLoai;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
